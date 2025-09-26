@@ -25,10 +25,9 @@
 
         cursor_move: behavior_sensor_rotate_cursor_move {
             compatible = "zmk,behavior-sensor-rotate";
-            bindings = <&mkp MOUSE_X 10>, <&mkp MOUSE_Y -10>;
- // ← 符号で方向を調整
+            bindings = <&mkp MOUSE_X 10>, <&mkp MOUSE_Y -10>; // ← 符号で方向を調整
         };
-    };
+
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
