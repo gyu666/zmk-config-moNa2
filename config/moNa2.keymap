@@ -23,16 +23,12 @@
             label = "TO_LAYER_0";
         };
 
-  cursor_move: behavior_sensor_rotate_cursor_move {
-    compatible = "zmk,behavior-sensor-rotate";
-    bindings = <&mkp MOUSE_X 10>, <&mkp MOUSE_Y -10>; // ← 符号で方向を調整
-
-};
-   
-
-
-
-   };
+        cursor_move: behavior_sensor_rotate_cursor_move {
+            compatible = "zmk,behavior-sensor-rotate";
+            bindings = <&mkp MOUSE_X 10>, <&mkp MOUSE_Y -10>;
+ // ← 符号で方向を調整
+        };
+    };
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
@@ -48,7 +44,9 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
- // ← 順序を逆に
+
+            // ← 順序を逆に
+
             tap-ms = <20>;
         };
     };
@@ -72,7 +70,7 @@
 &kp LC(Q)  &kp LC(W)  &kp F7     &kp F8               &kp F9                    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTERISK
 &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)            &trans            &trans  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &mt LC(LS(V)) LG(V)  &trans  &trans    &trans  &kp N0     &kp N1  &kt N2  &kt N3  &kp EQUAL
-&trans     &trans     &trans     &trans               &trans  &trans    &trans  &trans                             &kp F12
+&trans     &trans     &trans     &trans               &trans  &trans    &trans  &trans                             &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
