@@ -36,21 +36,24 @@
             tapping-term-ms = <200>;
         };
 
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            // ← 順序を逆に
-
-            tap-ms = <20>;
-        };
+behaviors {
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        tap-ms = <20>;
     };
 
-    
-macros {};
+    cursor_move: behavior_sensor_rotate_cursor_move {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&mkp MOUSE_X -10>, <&mkp MOUSE_Y 10>; // ← 反転調整
+        tap-ms = <20>;
+    };
+};
 
-behaviors {};
+
+
 keymap {
         compatible = "zmk,keymap";
 
