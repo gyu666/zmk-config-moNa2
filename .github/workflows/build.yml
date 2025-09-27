@@ -3,4 +3,4 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2.1
--DZMK_EXTRA_MODULES=/__w/zmk-config-moNa2/zmk-config-moNa2/zmk-pmw3610-driver
+-DZMK_EXTRA_MODULES=/__w/zmk-config-moNa2/zmk-config-moNa2
