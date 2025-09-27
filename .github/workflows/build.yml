@@ -6,4 +6,5 @@ jobs:
     with:
       shield: moNa2_R rgbled_adapter
       board: seeeduino_xiao_ble
-      extra_modules: /__w/zmk-config-moNa2/zmk-config-moNa2/zmk-pmw3610-driver
+      extra-modules: |
+        zmk-pmw3610-driver
