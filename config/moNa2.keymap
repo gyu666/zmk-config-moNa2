@@ -16,9 +16,10 @@
     combos {
         compatible = "zmk,combos";
 
-        conbo1 {
+        conbo01 {
             bindings = <&kp N1>;
-            key-positions = <9 8>;
+            key-positions = <8 9>;
+            layers = <1>;
         };
     };
 
